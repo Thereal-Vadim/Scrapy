@@ -8,7 +8,6 @@ class LightingSpider(scrapy.Spider):
     start_urls = ["https://www.divan.ru/category/lighting"]
 
     def __init__(self):
-        # Создаем CSV файл при инициализации паука
         self.file = open('lighting_products.csv', 'wb')
         self.exporter = CsvItemExporter(self.file)
         self.exporter.start_exporting()
